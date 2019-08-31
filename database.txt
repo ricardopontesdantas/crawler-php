@@ -1,0 +1,20 @@
+CREATE DATABASE `audima`;
+USE `audima`;
+
+CREATE TABLE `audima`.`urls`(
+	`id` INT NOT NULL AUTO_INCREMENT ,
+	`url` VARCHAR(255) ,
+	`visited` ENUM('yes','no') DEFAULT 'no' ,
+	PRIMARY KEY (`id`) );
+
+CREATE TABLE `audima`.`emails`(
+	`id` INT NOT NULL AUTO_INCREMENT ,
+	`email` VARCHAR(255) ,
+	PRIMARY KEY (`id`)  );
+
+-- exemplo de URLs iniciais
+INSERT INTO `audima`.`urls`(url) VALUES
+('http://alomsolucoes.com.br'),
+('https://www.salineira.com.br/linhas-e-horarios'),
+('https://www.ricaperrone.com.br/category/futebol/clubes-futebol/flamengo/'),
+('https://www.cna.com.br/busca-escola')
